@@ -1,0 +1,42 @@
+[
+  {
+    "id": 5,
+    "date": "2026-04-28",
+    "client": "Valérie Baert",
+    "category": "DESIGN",
+    "comment": "Ajouter les affiches des événements directement sur la page d'accueil.",
+    "status": "todo"
+  },
+  {
+    "id": 4,
+    "date": "2026-04-28",
+    "client": "Christophe Laire",
+    "category": "TECH",
+    "comment": "Vérifier que le chatbot est asynchrone pour collecter les coordonnées (leads).",
+    "status": "in-progress"
+  },
+  {
+    "id": 3,
+    "date": "2026-04-28",
+    "client": "Christophe Laire",
+    "category": "NAVIGATION",
+    "comment": "Rendre le numéro de téléphone cliquable dans le footer et sur les fiches commerçants.",
+    "status": "todo"
+  },
+  {
+    "id": 2,
+    "date": "2026-04-28",
+    "client": "Christophe Laire",
+    "category": "UX",
+    "comment": "Ajouter une barre de recherche globale pour tout le site (ex: coiffure, boucher).",
+    "status": "todo"
+  },
+  {
+    "id": 1,
+    "date": "2026-04-28",
+    "client": "Christophe Laire",
+    "category": "CONTENU",
+    "comment": "Page Association : remplacer '200 adhérents' par '+200 adhérents qui vous facilitent la vie'.",
+    "status": "done"
+  }
+]
