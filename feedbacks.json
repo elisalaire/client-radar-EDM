@@ -26,5 +26,5 @@
   { "id": 4, "date": "2026-04-28", "client": "Christophe Laire", "category": "STRATÉGIE", "comment": "Décider de la suppression définitive de la page FAQ.", "status": "todo" },
   { "id": 3, "date": "2026-04-28", "client": "Christophe Laire", "category": "STRATÉGIE", "comment": "Décider de la suppression définitive de la page Carte.", "status": "todo" },
   { "id": 2, "date": "2026-04-28", "client": "Christophe Laire", "category": "CONTENU", "comment": "Améliorer formulation Association : aspect dynamique, solidaire et local.", "status": "todo" },
-  { "id": 1, "date": "2026-04-28", "client": "Christophe Laire", "category": "UX", "comment": "Valider pertinence bouton 'partager l'événement' (Excellent retour).", "status": "done" }
+  { "id": 1, "date": "2026-04-28", "client": "Christophe Laire", "category": "UX", "comment": "Valider pertinence bouton 'partager l'événement' (Excellent retour).", "status": "todo" }
 ]
