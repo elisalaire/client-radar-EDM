@@ -19,15 +19,25 @@
 <body class="p-6 md:p-12 lg:p-20 text-white">
 
     <div class="max-w-4xl mx-auto">
-        <header class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+        <header class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-6">
             <div>
                 <h1 class="text-4xl font-extrabold uppercase tracking-tighter">Feedback <span class="text-blue-500">Radar</span></h1>
                 <p class="text-slate-500 text-sm mt-2 font-mono uppercase tracking-widest flex items-center">
-                    <span class="status-dot bg-emerald-500 animate-pulse"></span> Terminal v4.1 // Ready for Launch
+                    <span class="status-dot bg-emerald-500 animate-pulse"></span> Terminal v4.3 // Legend & Labels Active
                 </p>
             </div>
             <div id="stats" class="flex flex-wrap gap-4 justify-end font-mono"></div>
         </header>
+
+        <div class="flex flex-wrap gap-3 mb-12 p-4 bg-white/5 border border-white/10 rounded-2xl items-center">
+            <span class="text-[10px] font-mono uppercase text-slate-500 mr-2 tracking-widest font-bold">Légende :</span>
+            <div class="flex items-center gap-2 px-3 py-1 bg-blue-500/10 border border-blue-500/30 rounded-full">
+                <span class="text-[10px] text-blue-300">🔵 Action Christophe 🙋‍♂️</span>
+            </div>
+            <div class="flex items-center gap-2 px-3 py-1 bg-pink-500/10 border border-pink-500/30 rounded-full">
+                <span class="text-[10px] text-pink-300">🌸 Action Valérie 🙋‍♀️</span>
+            </div>
+        </div>
 
         <div id="action-list" class="space-y-4 pb-24"></div>
     </div>
@@ -69,6 +79,13 @@
                         'done': { label: 'Validé', class: 'border-emerald-500/30 text-emerald-500 bg-emerald-500/5' }
                     }[item.status] || { label: item.status, class: 'border-slate-500 text-slate-500' };
 
+                    // Badge responsabilité
+                    const waitingBadge = item.waiting_for 
+                        ? `<span class="ml-auto tech-font text-[9px] px-2 py-0.5 rounded-full ${item.waiting_for === 'Valérie' ? 'bg-pink-500/20 text-pink-300 border border-pink-500/30' : 'bg-blue-500/20 text-blue-300 border border-blue-500/30'}">
+                            ${item.waiting_for === 'Valérie' ? '🌸 ' : '🔵 '}Attente : ${item.waiting_for}
+                           </span>` 
+                        : '';
+
                     const isPhoto = item.photo_needed === true;
                     const btnLabel = isPhoto ? "Envoyer la photo" : "Répondre";
                     const btnClass = isPhoto 
@@ -80,6 +97,7 @@
                             <div class="flex items-center gap-3 mb-4">
                                 <span class="tech-font text-[10px] px-2 py-0.5 rounded border ${config.class} uppercase font-bold tracking-wider">${config.label}</span>
                                 <span class="text-slate-600 text-[10px] font-mono uppercase tracking-widest">// ${item.category}</span>
+                                ${item.status !== 'done' ? waitingBadge : ''}
                             </div>
                             <p class="text-white font-medium text-lg leading-relaxed">${item.comment}</p>
                             
