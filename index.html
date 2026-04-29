@@ -23,29 +23,26 @@
             <div>
                 <h1 class="text-4xl font-extrabold uppercase tracking-tighter">Feedback <span class="text-blue-500">Radar</span></h1>
                 <p class="text-slate-500 text-sm mt-2 font-mono uppercase tracking-widest flex items-center">
-                    <span class="status-dot bg-emerald-500 animate-pulse"></span> Terminal v3.2 // Smooth Interaction
+                    <span class="status-dot bg-emerald-500 animate-pulse"></span> Terminal v4.1 // Ready for Launch
                 </p>
             </div>
-            <div id="stats" class="flex flex-wrap gap-4 justify-end"></div>
+            <div id="stats" class="flex flex-wrap gap-4 justify-end font-mono"></div>
         </header>
 
         <div id="action-list" class="space-y-4 pb-24"></div>
     </div>
 
-    <button onclick="openTallyModal('Général')" class="fixed bottom-8 right-8 bg-blue-600 hover:bg-blue-500 text-white px-6 py-4 rounded-full font-bold shadow-2xl shadow-blue-500/20 flex items-center gap-3 transition-all z-50">
+    <button data-tally-open="2Eb629" class="fixed bottom-8 right-8 bg-blue-600 hover:bg-blue-500 text-white px-6 py-4 rounded-full font-bold shadow-2xl shadow-blue-500/40 flex items-center gap-3 transition-all z-50">
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 21 1.9-5.7a8.5 8.5 0 1 1 3.8 3.8z"/></svg>
         Nouveau retour
     </button>
 
     <script>
-        // FONCTION DE FORCE POUR LA POPUP
         function openTallyModal(actionId) {
             Tally.openPopup('2Eb629', {
                 layout: 'modal',
                 width: 500,
-                hiddenFields: {
-                    action_id: actionId
-                }
+                hiddenFields: { action_id: actionId }
             });
         }
 
@@ -58,10 +55,9 @@
                 data.sort((a, b) => (priorityOrder[a.status] || 99) - (priorityOrder[b.status] || 99));
 
                 document.getElementById('stats').innerHTML = `
-                    <div class="text-right border-l border-white/10 pl-4"><p class="text-[10px] text-slate-500 font-mono uppercase font-bold tracking-widest text-white/40">Total</p><p class="text-xl font-bold">${data.length}</p></div>
-                    <div class="text-right border-l border-white/10 pl-4"><p class="text-[10px] text-indigo-400 font-mono uppercase font-bold tracking-widest">Questions</p><p class="text-xl font-bold text-indigo-500">${data.filter(i=>i.status==='question').length}</p></div>
-                    <div class="text-right border-l border-white/10 pl-4"><p class="text-[10px] text-red-400 font-mono uppercase font-bold tracking-widest">Bloqués</p><p class="text-xl font-bold text-red-500">${data.filter(i=>i.status==='blocked').length}</p></div>
-                    <div class="text-right border-l border-white/10 pl-4"><p class="text-[10px] text-emerald-400 font-mono uppercase font-bold tracking-widest text-white/40">Validés</p><p class="text-xl font-bold text-emerald-500">${data.filter(i=>i.status==='done').length}</p></div>
+                    <div class="text-right border-l border-white/10 pl-4"><p class="text-[10px] text-slate-500 uppercase font-bold tracking-widest">Total</p><p class="text-xl font-bold">${data.length}</p></div>
+                    <div class="text-right border-l border-white/10 pl-4"><p class="text-[10px] text-indigo-400 uppercase font-bold tracking-widest">Questions</p><p class="text-xl font-bold text-indigo-500">${data.filter(i=>i.status==='question').length}</p></div>
+                    <div class="text-right border-l border-white/10 pl-4"><p class="text-[10px] text-red-400 uppercase font-bold tracking-widest">Bloqués</p><p class="text-xl font-bold text-red-500">${data.filter(i=>i.status==='blocked').length}</p></div>
                 `;
 
                 const container = document.getElementById('action-list');
@@ -73,6 +69,12 @@
                         'done': { label: 'Validé', class: 'border-emerald-500/30 text-emerald-500 bg-emerald-500/5' }
                     }[item.status] || { label: item.status, class: 'border-slate-500 text-slate-500' };
 
+                    const isPhoto = item.photo_needed === true;
+                    const btnLabel = isPhoto ? "Envoyer la photo" : "Répondre";
+                    const btnClass = isPhoto 
+                        ? "bg-red-500/10 border-red-500/40 text-red-400 hover:bg-red-500/20" 
+                        : "bg-indigo-500/10 border-indigo-500/40 text-indigo-400 hover:bg-indigo-500/20";
+
                     return `
                         <div class="glass p-6 rounded-2xl ${item.status === 'done' ? 'opacity-30 grayscale' : ''}">
                             <div class="flex items-center gap-3 mb-4">
@@ -82,12 +84,12 @@
                             <p class="text-white font-medium text-lg leading-relaxed">${item.comment}</p>
                             
                             ${item.query ? `
-                                <div class="mt-4 p-4 bg-indigo-500/5 border border-indigo-500/20 rounded-xl flex flex-col md:flex-row md:items-center justify-between gap-4">
-                                    <div class="text-indigo-300 text-sm font-medium italic">Elisa : "${item.query}"</div>
+                                <div class="mt-4 p-4 bg-white/5 border border-white/10 rounded-xl flex flex-col md:flex-row md:items-center justify-between gap-4">
+                                    <div class="text-slate-300 text-sm font-medium italic">Elisa : "${item.query}"</div>
                                     <button 
                                         onclick="openTallyModal('#${item.id}')"
-                                        class="shrink-0 inline-flex items-center gap-2 px-3 py-1.5 bg-indigo-500/20 border border-indigo-500/40 rounded-lg text-indigo-300 text-[10px] uppercase font-bold tracking-wider hover:bg-indigo-500/40 transition-all">
-                                        Répondre
+                                        class="shrink-0 inline-flex items-center gap-2 px-3 py-1.5 border rounded-lg text-[10px] uppercase font-bold tracking-wider transition-all ${btnClass}">
+                                        ${btnLabel}
                                     </button>
                                 </div>
                             ` : ''}
