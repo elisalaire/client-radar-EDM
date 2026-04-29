@@ -1,70 +1,107 @@
-<script>
-    // Fonction pour ouvrir Tally avec l'ID forcé
-    function openTally(actionId) {
-        if (typeof Tally !== 'undefined') {
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Radar | Monitoring</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&family=JetBrains+Mono&display=swap" rel="stylesheet">
+    <script async src="https://tally.so/widgets/embed.js"></script>
+    <style>
+        :root { --bg: #050505; --card: #0f0f12; --accent: #3b82f6; --border: rgba(255, 255, 255, 0.1); }
+        body { background-color: var(--bg); color: #e2e8f0; font-family: 'Plus Jakarta Sans', sans-serif; letter-spacing: -0.01em; }
+        .glass { background: var(--card); border: 1px solid var(--border); transition: all 0.3s ease; }
+        .glass:hover { border-color: rgba(59, 130, 246, 0.5); transform: translateY(-2px); }
+        .tech-font { font-family: 'JetBrains Mono', monospace; }
+        .status-dot { height: 8px; width: 8px; border-radius: 50%; display: inline-block; margin-right: 6px; }
+    </style>
+</head>
+<body class="p-6 md:p-12 lg:p-20 text-white">
+
+    <div class="max-w-4xl mx-auto">
+        <header class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+            <div>
+                <h1 class="text-4xl font-extrabold uppercase tracking-tighter">Feedback <span class="text-blue-500">Radar</span></h1>
+                <p class="text-slate-500 text-sm mt-2 font-mono uppercase tracking-widest flex items-center">
+                    <span class="status-dot bg-emerald-500 animate-pulse"></span> Terminal v3.2 // Smooth Interaction
+                </p>
+            </div>
+            <div id="stats" class="flex flex-wrap gap-4 justify-end"></div>
+        </header>
+
+        <div id="action-list" class="space-y-4 pb-24"></div>
+    </div>
+
+    <button onclick="openTallyModal('Général')" class="fixed bottom-8 right-8 bg-blue-600 hover:bg-blue-500 text-white px-6 py-4 rounded-full font-bold shadow-2xl shadow-blue-500/20 flex items-center gap-3 transition-all z-50">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 21 1.9-5.7a8.5 8.5 0 1 1 3.8 3.8z"/></svg>
+        Nouveau retour
+    </button>
+
+    <script>
+        // FONCTION DE FORCE POUR LA POPUP
+        function openTallyModal(actionId) {
             Tally.openPopup('2Eb629', {
+                layout: 'modal',
+                width: 500,
                 hiddenFields: {
                     action_id: actionId
                 }
             });
-        } else {
-            // Si le script Tally n'est pas encore chargé, on utilise le lien direct
-            window.open(`https://tally.so/r/2Eb629?action_id=${actionId}`, '_blank');
         }
-    }
 
-    async function loadFeedbacks() {
-        try {
-            const response = await fetch('feedbacks.json');
-            let data = await response.json();
-            
-            const priorityOrder = { 'question': 1, 'blocked': 2, 'todo': 3, 'done': 4 };
-            data.sort((a, b) => (priorityOrder[a.status] || 99) - (priorityOrder[b.status] || 99));
+        async function loadFeedbacks() {
+            try {
+                const response = await fetch('feedbacks.json');
+                let data = await response.json();
+                
+                const priorityOrder = { 'question': 1, 'blocked': 2, 'todo': 3, 'done': 4 };
+                data.sort((a, b) => (priorityOrder[a.status] || 99) - (priorityOrder[b.status] || 99));
 
-            // Stats
-            document.getElementById('stats').innerHTML = `
-                <div class="text-right border-l border-white/10 pl-4"><p class="text-[10px] text-slate-500 font-mono uppercase font-bold tracking-widest">Total</p><p class="text-xl font-bold">${data.length}</p></div>
-                <div class="text-right border-l border-white/10 pl-4"><p class="text-[10px] text-indigo-400 font-mono uppercase font-bold tracking-widest">Questions</p><p class="text-xl font-bold text-indigo-500">${data.filter(i=>i.status==='question').length}</p></div>
-                <div class="text-right border-l border-white/10 pl-4"><p class="text-[10px] text-red-400 font-mono uppercase font-bold tracking-widest">Bloqués</p><p class="text-xl font-bold text-red-500">${data.filter(i=>i.status==='blocked').length}</p></div>
-                <div class="text-right border-l border-white/10 pl-4"><p class="text-[10px] text-emerald-400 font-mono uppercase font-bold tracking-widest">Validés</p><p class="text-xl font-bold text-emerald-500">${data.filter(i=>i.status==='done').length}</p></div>
-            `;
-
-            const container = document.getElementById('action-list');
-            container.innerHTML = data.map(item => {
-                const config = {
-                    'todo': { label: 'À Faire', class: 'border-amber-500/30 text-amber-500 bg-amber-500/5' },
-                    'blocked': { label: 'Bloqué', class: 'border-red-500/40 text-red-400 bg-red-500/10' },
-                    'question': { label: 'Besoin d\'infos', class: 'border-indigo-500/40 text-indigo-400 bg-indigo-500/10' },
-                    'done': { label: 'Validé', class: 'border-emerald-500/30 text-emerald-500 bg-emerald-500/5' }
-                }[item.status] || { label: item.status, class: 'border-slate-500 text-slate-500' };
-
-                return `
-                    <div class="glass p-6 rounded-2xl ${item.status === 'done' ? 'opacity-30 grayscale' : ''}">
-                        <div class="flex items-center gap-3 mb-4">
-                            <span class="tech-font text-[10px] px-2 py-0.5 rounded border ${config.class} uppercase font-bold tracking-wider">${config.label}</span>
-                            <span class="text-slate-600 text-[10px] font-mono uppercase tracking-widest">// ${item.category}</span>
-                        </div>
-                        <p class="text-white font-medium text-lg leading-relaxed">${item.comment}</p>
-                        
-                        ${item.query ? `
-                            <div class="mt-4 p-4 bg-indigo-500/5 border border-indigo-500/20 rounded-xl flex flex-col md:flex-row md:items-center justify-between gap-4">
-                                <div class="text-indigo-300 text-sm font-medium italic">Elisa : "${item.query}"</div>
-                                <button 
-                                    onclick="openTally('${item.id}')"
-                                    class="shrink-0 inline-flex items-center gap-2 px-3 py-1.5 bg-indigo-500/20 border border-indigo-500/40 rounded-lg text-indigo-300 text-[10px] uppercase font-bold tracking-wider hover:bg-indigo-500/40 transition-all">
-                                    Répondre
-                                </button>
-                            </div>
-                        ` : ''}
-
-                        <div class="flex justify-between items-center mt-6 pt-4 border-t border-white/5 uppercase font-mono text-[10px] text-slate-600">
-                            <p>${item.client} <span class="ml-2 text-slate-400">#${item.id}</span></p>
-                            <p>${item.date}</p>
-                        </div>
-                    </div>
+                document.getElementById('stats').innerHTML = `
+                    <div class="text-right border-l border-white/10 pl-4"><p class="text-[10px] text-slate-500 font-mono uppercase font-bold tracking-widest text-white/40">Total</p><p class="text-xl font-bold">${data.length}</p></div>
+                    <div class="text-right border-l border-white/10 pl-4"><p class="text-[10px] text-indigo-400 font-mono uppercase font-bold tracking-widest">Questions</p><p class="text-xl font-bold text-indigo-500">${data.filter(i=>i.status==='question').length}</p></div>
+                    <div class="text-right border-l border-white/10 pl-4"><p class="text-[10px] text-red-400 font-mono uppercase font-bold tracking-widest">Bloqués</p><p class="text-xl font-bold text-red-500">${data.filter(i=>i.status==='blocked').length}</p></div>
+                    <div class="text-right border-l border-white/10 pl-4"><p class="text-[10px] text-emerald-400 font-mono uppercase font-bold tracking-widest text-white/40">Validés</p><p class="text-xl font-bold text-emerald-500">${data.filter(i=>i.status==='done').length}</p></div>
                 `;
-            }).join('');
-        } catch (e) { console.error(e); }
-    }
-    loadFeedbacks();
-</script>
+
+                const container = document.getElementById('action-list');
+                container.innerHTML = data.map(item => {
+                    const config = {
+                        'todo': { label: 'À Faire', class: 'border-amber-500/30 text-amber-500 bg-amber-500/5' },
+                        'blocked': { label: 'Bloqué', class: 'border-red-500/40 text-red-400 bg-red-500/10' },
+                        'question': { label: 'Besoin d\'infos', class: 'border-indigo-500/40 text-indigo-400 bg-indigo-500/10' },
+                        'done': { label: 'Validé', class: 'border-emerald-500/30 text-emerald-500 bg-emerald-500/5' }
+                    }[item.status] || { label: item.status, class: 'border-slate-500 text-slate-500' };
+
+                    return `
+                        <div class="glass p-6 rounded-2xl ${item.status === 'done' ? 'opacity-30 grayscale' : ''}">
+                            <div class="flex items-center gap-3 mb-4">
+                                <span class="tech-font text-[10px] px-2 py-0.5 rounded border ${config.class} uppercase font-bold tracking-wider">${config.label}</span>
+                                <span class="text-slate-600 text-[10px] font-mono uppercase tracking-widest">// ${item.category}</span>
+                            </div>
+                            <p class="text-white font-medium text-lg leading-relaxed">${item.comment}</p>
+                            
+                            ${item.query ? `
+                                <div class="mt-4 p-4 bg-indigo-500/5 border border-indigo-500/20 rounded-xl flex flex-col md:flex-row md:items-center justify-between gap-4">
+                                    <div class="text-indigo-300 text-sm font-medium italic">Elisa : "${item.query}"</div>
+                                    <button 
+                                        onclick="openTallyModal('#${item.id}')"
+                                        class="shrink-0 inline-flex items-center gap-2 px-3 py-1.5 bg-indigo-500/20 border border-indigo-500/40 rounded-lg text-indigo-300 text-[10px] uppercase font-bold tracking-wider hover:bg-indigo-500/40 transition-all">
+                                        Répondre
+                                    </button>
+                                </div>
+                            ` : ''}
+
+                            <div class="flex justify-between items-center mt-6 pt-4 border-t border-white/5 uppercase font-mono text-[10px] text-slate-600">
+                                <p>${item.client} <span class="ml-2 text-slate-400">#${item.id}</span></p>
+                                <p>${item.date}</p>
+                            </div>
+                        </div>
+                    `;
+                }).join('');
+            } catch (e) { console.error(e); }
+        }
+        loadFeedbacks();
+    </script>
+</body>
+</html>
