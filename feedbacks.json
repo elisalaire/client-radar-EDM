@@ -4,6 +4,7 @@
     "date": "2026-04-29",
     "client": "Valérie Baert",
     "category": "DESIGN",
+    "waiting_for": "Valérie",
     "comment": "Remplacer la photo de fond de la page 'Événement' (Jugée trop générale).",
     "status": "blocked",
     "photo_needed": true,
@@ -14,6 +15,7 @@
     "date": "2026-04-29",
     "client": "Valérie Baert",
     "category": "DESIGN",
+    "waiting_for": "Valérie",
     "comment": "Remplacer la photo de fond de la page 'Chèque Cadeau' (Jugée trop générale).",
     "status": "blocked",
     "photo_needed": true,
@@ -24,6 +26,7 @@
     "date": "2026-04-29",
     "client": "Valérie Baert",
     "category": "DESIGN",
+    "waiting_for": "Valérie",
     "comment": "Remplacer la photo de fond de la page 'Guide' (Jugée trop générale).",
     "status": "blocked",
     "photo_needed": true,
@@ -33,8 +36,9 @@
     "id": 27,
     "date": "2026-04-29",
     "client": "Valérie Baert",
-    "category": "ARBITRAGE",
-    "comment": "DÉPENDANCE : Transformer l'onglet 'Carte' en 'Plan de la ville' avec mise en avant des quartiers.",
+    "category": "question",
+    "waiting_for": "Valérie",
+    "comment": "Transformer l'onglet 'Carte' en 'Plan de la ville' avec mise en avant des quartiers.",
     "status": "question",
     "query": "Valérie, qu'entends-tu par mise en avant des quartiers ? (Zone interactive, code couleur, simple image ?)"
   },
@@ -42,10 +46,11 @@
     "id": 26,
     "date": "2026-04-29",
     "client": "Christophe Laire",
-    "category": "ARBITRAGE",
-    "comment": "DÉPENDANCE : Simplifier le menu principal en retirant l'onglet 'Carte'.",
-    "status": "blocked",
-    "query": "Arbitrage nécessaire : Christophe veut retirer la Carte, Valérie veut la transformer en Plan de ville."
+    "category": "question",
+    "waiting_for": "Christophe",
+    "comment": "Simplifier le menu principal en retirant l'onglet 'Carte'.",
+    "status": "question",
+    "query": "Christophe, cette action dépend de la validation du nouveau plan de ville demandé par Valérie. On supprime ou on transforme ?"
   },
   {
     "id": 25,
@@ -60,6 +65,7 @@
     "date": "2026-04-29",
     "client": "Christophe Laire",
     "category": "NAVIGATION",
+    "waiting_for": "Christophe",
     "comment": "Transformer 'Contact' en bouton d'action direct.",
     "status": "question",
     "query": "Est-ce que cela pourrait être un bouton qui ouvre un popup avec le formulaire de contact direct ?"
@@ -69,6 +75,7 @@
     "date": "2026-04-29",
     "client": "Valérie Baert",
     "category": "DESIGN",
+    "waiting_for": "Valérie",
     "comment": "Accueil : Évaluer le bandeau défilant pour les événements du moment (vs Vidéo actuelle).",
     "status": "question",
     "query": "S'agit-il du bandeau rose actuel rendu automatique pour faire défiler les événements ?"
@@ -78,6 +85,7 @@
     "date": "2026-04-29",
     "client": "Valérie Baert",
     "category": "DESIGN",
+    "waiting_for": "Valérie",
     "comment": "Ajouter une photo d'un commerce avec la vitrophanie visible.",
     "status": "blocked",
     "photo_needed": true,
@@ -128,6 +136,7 @@
     "date": "2026-04-29",
     "client": "Christophe Laire",
     "category": "NAVIGATION",
+    "waiting_for": "Christophe",
     "comment": "Ajouter un menu dédié pour accéder directement à la liste des commerçants.",
     "status": "question",
     "query": "Besoin de précisions : s'agit-il d'une page annuaire complète ou d'un raccourci spécifique dans le menu ?"
