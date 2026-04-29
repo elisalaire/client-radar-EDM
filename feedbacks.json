@@ -1,36 +1,282 @@
 [
-  { "id": 34, "date": "2026-04-28", "client": "Valérie Baert", "category": "DESIGN", "comment": "Changer la photo de fond 'Événement' : Trop générale, Valérie fournira une photo plus adaptée.", "status": "blocked" },
-  { "id": 33, "date": "2026-04-28", "client": "Valérie Baert", "category": "DESIGN", "comment": "Changer la photo de fond 'Chèque Cadeau' : Trop générale, Valérie fournira une photo plus adaptée.", "status": "blocked" },
-  { "id": 32, "date": "2026-04-28", "client": "Valérie Baert", "category": "DESIGN", "comment": "Changer la photo de fond 'Guide' : Trop générale, Valérie fournira une photo plus adaptée.", "status": "blocked" },
-  { "id": 31, "date": "2026-04-28", "client": "Valérie Baert", "category": "CONTENU", "comment": "Ajouter au bandeau de la page Association les photos transmises illustrant la vie de l'asso.", "status": "todo" },
-  { "id": 30, "date": "2026-04-28", "client": "Valérie Baert", "category": "CONTENU", "comment": "Page Asso : Parler de l'association avec ses 200 adhérents répartis sur les 8 quartiers.", "status": "todo" },
-  { "id": 29, "date": "2026-04-28", "client": "Valérie Baert", "category": "CONTENU", "comment": "Page Asso : Rappeler que la ville c'est 40 000 habitants et xxxx hectares.", "status": "todo" },
-  { "id": 28, "date": "2026-04-28", "client": "Valérie Baert", "category": "DESIGN", "comment": "Accueil : Créer un bandeau défilant avec les évènements du moment (Préférence Valérie).", "status": "todo" },
-  { "id": 27, "date": "2026-04-28", "client": "Valérie Baert", "category": "UX", "comment": "Remplacer l'onglet 'Carte' par 'Plan de la ville' (Plus adapté au contexte local).", "status": "todo" },
-  { "id": 26, "date": "2026-04-28", "client": "Valérie Baert", "category": "UX", "comment": "Sur le nouveau plan de la ville, mettre en avant les différents quartiers.", "status": "todo" },
-  { "id": 25, "date": "2026-04-28", "client": "Valérie Baert", "category": "DESIGN", "comment": "Ajouter une photo spécifique pour illustrer la page 'Chèques Cadeaux' (Attente Valérie).", "status": "blocked" },
-  { "id": 24, "date": "2026-04-28", "client": "Valérie Baert", "category": "DESIGN", "comment": "Ajouter une photo d'un commerce avec la vitrophanie visible (Attente Valérie).", "status": "blocked" },
-  { "id": 23, "date": "2026-04-28", "client": "Valérie Baert", "category": "CONTENU", "comment": "Événements : Ajouter l'affiche associée pour le Vide Grenier.", "status": "todo" },
-  { "id": 22, "date": "2026-04-28", "client": "Valérie Baert", "category": "CONTENU", "comment": "Événements : Ajouter l'affiche associée pour la Fête des Mères.", "status": "todo" },
-  { "id": 21, "date": "2026-04-28", "client": "Christophe Laire", "category": "NAVIGATION", "comment": "Rendre le numéro de téléphone cliquable dans le Footer.", "status": "todo" },
-  { "id": 20, "date": "2026-04-28", "client": "Christophe Laire", "category": "CONTENU", "comment": "Fiches Détail : Intégrer les descriptions longues demandées aux commerçants.", "status": "todo" },
-  { "id": 19, "date": "2026-04-28", "client": "Christophe Laire", "category": "CONTENU", "comment": "Fiches Détail : Intégrer les photos multiples (vitrine, produits) dans la base de données.", "status": "todo" },
-  { "id": 18, "date": "2026-04-28", "client": "Christophe Laire", "category": "UX", "comment": "Fiches Détail : Rendre le numéro de téléphone cliquable pour l'appel direct.", "status": "todo" },
-  { "id": 17, "date": "2026-04-28", "client": "Christophe Laire", "category": "UX", "comment": "Ajouter une barre de recherche globale permettant de chercher par type (ex: coiffure, boucher).", "status": "todo" },
-  { "id": 16, "date": "2026-04-28", "client": "Christophe Laire", "category": "NAVIGATION", "comment": "Ajouter un menu dédié 'Liste des commerçants' (Manquant actuellement).", "status": "todo" },
-  { "id": 15, "date": "2026-04-28", "client": "Christophe Laire", "category": "NAVIGATION", "comment": "Ajouter 'Adhérents' dans le menu principal (Incohérence actuelle avec le footer).", "status": "todo" },
-  { "id": 14, "date": "2026-04-28", "client": "Christophe Laire", "category": "NAVIGATION", "comment": "Simplifier le menu principal : Retirer l'onglet FAQ.", "status": "todo" },
-  { "id": 13, "date": "2026-04-28", "client": "Christophe Laire", "category": "NAVIGATION", "comment": "Simplifier le menu principal : Retirer l'onglet Carte.", "status": "todo" },
-  { "id": 12, "date": "2026-04-28", "client": "Christophe Laire", "category": "NAVIGATION", "comment": "Transformer 'Contact' en bouton d'action plutôt qu'en simple item de menu.", "status": "todo" },
-  { "id": 11, "date": "2026-04-28", "client": "Christophe Laire", "category": "TECH", "comment": "Vérifier si le Guide peut être intégré directement via un firmware au lieu d'une page externe.", "status": "todo" },
-  { "id": 10, "date": "2026-04-28", "client": "Christophe Laire", "category": "CONTENU", "comment": "Modifier 'uniquement sur rendez-vous' par 'disponible sur rendez-vous'.", "status": "todo" },
-  { "id": 9, "date": "2026-04-28", "client": "Christophe Laire", "category": "CONTENU", "comment": "Chèques Cadeaux : Remplacer 'adhérents' par 'tous nos commerçants de l'association'.", "status": "todo" },
-  { "id": 8, "date": "2026-04-28", "client": "Christophe Laire", "category": "UX", "comment": "Réorganiser Chèques Cadeaux : Mettre le bénéfice client en premier (Acceptation > Employeurs > 10€).", "status": "todo" },
-  { "id": 7, "date": "2026-04-28", "client": "Christophe Laire", "category": "TECH", "comment": "S'assurer que le Chatbot est asynchrone pour collecter les coordonnées et générer des leads.", "status": "todo" },
-  { "id": 6, "date": "2026-04-28", "client": "Christophe Laire", "category": "CONTENU", "comment": "Page Asso : Remplacer par 'L'association regroupe +200 adhérents qui vous facilitent la vie'.", "status": "todo" },
-  { "id": 5, "date": "2026-04-28", "client": "Christophe Laire", "category": "DESIGN", "comment": "Page Commerçants : Remplacer 'détail' par le sigle '+' avec 'info' à côté.", "status": "todo" },
-  { "id": 4, "date": "2026-04-28", "client": "CONTENU", "comment": "Corriger l'orthographe dans la section Guide : mettre 'leurs savoir-faire' au pluriel.", "status": "todo" },
-  { "id": 3, "date": "2026-04-28", "client": "Christophe Laire", "category": "DESIGN", "comment": "Chèques Cadeaux : Remplacer 'Pourquoi les acheter ?' par une approche plus haut de gamme.", "status": "todo" },
-  { "id": 2, "date": "2026-04-28", "client": "STRATÉGIE", "comment": "Évaluer si le bandeau défilant (Valérie) est plus pertinent que la vidéo actuelle (Christophe).", "status": "todo" },
-  { "id": 1, "date": "2026-04-28", "client": "Christophe Laire", "category": "UX", "comment": "Bouton 'partager l'événement' : Dynamique excellente pour le partage réseaux sociaux.", "status": "todo" }
+  {
+    "id": 34,
+    "date": "2026-04-28",
+    "client": "Valérie Baert",
+    "category": "DESIGN",
+    "comment": "Changer la photo de fond 'Événement' : Trop générale, Valérie fournira une photo plus adaptée.",
+    "status": "blocked",
+    "query": "En attente de la nouvelle photo de la part de Valérie."
+  },
+  {
+    "id": 33,
+    "date": "2026-04-28",
+    "client": "Valérie Baert",
+    "category": "DESIGN",
+    "comment": "Changer la photo de fond 'Chèque Cadeau' : Trop générale, Valérie fournira une photo plus adaptée.",
+    "status": "blocked",
+    "query": "En attente de la nouvelle photo de la part de Valérie."
+  },
+  {
+    "id": 32,
+    "date": "2026-04-28",
+    "client": "Valérie Baert",
+    "category": "DESIGN",
+    "comment": "Changer la photo de fond 'Guide' : Trop générale, Valérie fournira une photo plus adaptée.",
+    "status": "blocked",
+    "query": "En attente de la nouvelle photo de la part de Valérie."
+  },
+  {
+    "id": 31,
+    "date": "2026-04-28",
+    "client": "Valérie Baert",
+    "category": "CONTENU",
+    "comment": "Ajouter au bandeau de la page Association les photos transmises illustrant la vie de l'asso.",
+    "status": "todo"
+  },
+  {
+    "id": 30,
+    "date": "2026-04-28",
+    "client": "Valérie Baert",
+    "category": "CONTENU",
+    "comment": "Page Asso : Parler de l'association avec ses 200 adhérents répartis sur les 8 quartiers.",
+    "status": "todo"
+  },
+  {
+    "id": 29,
+    "date": "2026-04-28",
+    "client": "Valérie Baert",
+    "category": "CONTENU",
+    "comment": "Page Asso : Rappeler que la ville c'est 40 000 habitants et xxxx hectares.",
+    "status": "todo"
+  },
+  {
+    "id": 28,
+    "date": "2026-04-28",
+    "client": "Valérie Baert",
+    "category": "DESIGN",
+    "comment": "Accueil : Créer un bandeau défilant avec les évènements du moment (Préférence Valérie).",
+    "status": "question",
+    "query": "S'agit-il du bandeau rose actuel rendu automatique pour faire défiler les événements ?"
+  },
+  {
+    "id": 27,
+    "date": "2026-04-28",
+    "client": "Valérie Baert",
+    "category": "UX",
+    "comment": "Remplacer l'onglet 'Carte' par 'Plan de la ville' (Plus adapté au contexte local).",
+    "status": "question",
+    "query": "Qu'entendez-vous par mise en avant des quartiers ? (Zone interactive, code couleur, simple image ?)"
+  },
+  {
+    "id": 26,
+    "date": "2026-04-28",
+    "client": "Christophe Laire",
+    "category": "NAVIGATION",
+    "comment": "Simplifier le menu principal : Retirer l'onglet Carte.",
+    "status": "blocked",
+    "query": "Arbitrage nécessaire : Christophe veut retirer la Carte, Valérie veut la transformer en Plan de ville."
+  },
+  {
+    "id": 25,
+    "date": "2026-04-28",
+    "client": "Valérie Baert",
+    "category": "DESIGN",
+    "comment": "Ajouter une photo spécifique pour illustrer la page 'Chèques Cadeaux'.",
+    "status": "blocked",
+    "query": "En attente de la photo de la part de Valérie."
+  },
+  {
+    "id": 24,
+    "date": "2026-04-28",
+    "client": "Valérie Baert",
+    "category": "DESIGN",
+    "comment": "Ajouter une photo d'un commerce avec la vitrophanie visible.",
+    "status": "blocked",
+    "query": "En attente de la photo de la part de Valérie."
+  },
+  {
+    "id": 23,
+    "date": "2026-04-28",
+    "client": "Valérie Baert",
+    "category": "CONTENU",
+    "comment": "Événements : Ajouter l'affiche associée pour le Vide Grenier.",
+    "status": "todo"
+  },
+  {
+    "id": 22,
+    "date": "2026-04-28",
+    "client": "Valérie Baert",
+    "category": "CONTENU",
+    "comment": "Événements : Ajouter l'affiche associée pour la Fête des Mères.",
+    "status": "todo"
+  },
+  {
+    "id": 21,
+    "date": "2026-04-28",
+    "client": "Christophe Laire",
+    "category": "NAVIGATION",
+    "comment": "Rendre le numéro de téléphone cliquable dans le Footer.",
+    "status": "todo"
+  },
+  {
+    "id": 20,
+    "date": "2026-04-28",
+    "client": "Christophe Laire",
+    "category": "CONTENU",
+    "comment": "Fiches Détail : Intégrer les descriptions longues demandées aux commerçants.",
+    "status": "todo"
+  },
+  {
+    "id": 19,
+    "date": "2026-04-28",
+    "client": "Christophe Laire",
+    "category": "CONTENU",
+    "comment": "Fiches Détail : Intégrer les photos multiples (vitrine, produits) dans la base de données.",
+    "status": "todo"
+  },
+  {
+    "id": 18,
+    "date": "2026-04-28",
+    "client": "Christophe Laire",
+    "category": "UX",
+    "comment": "Fiches Détail : Rendre le numéro de téléphone cliquable pour l'appel direct.",
+    "status": "todo"
+  },
+  {
+    "id": 17,
+    "date": "2026-04-28",
+    "client": "Christophe Laire",
+    "category": "UX",
+    "comment": "Ajouter une barre de recherche globale permettant de chercher par type (ex: coiffure, boucher).",
+    "status": "todo"
+  },
+  {
+    "id": 16,
+    "date": "2026-04-28",
+    "client": "Christophe Laire",
+    "category": "NAVIGATION",
+    "comment": "Ajouter un menu dédié pour la liste des commerçants.",
+    "status": "question",
+    "query": "Besoin de précisions : s'agit-il d'une page annuaire complète ou d'un raccourci spécifique dans le menu ?"
+  },
+  {
+    "id": 15,
+    "date": "2026-04-28",
+    "client": "Christophe Laire",
+    "category": "NAVIGATION",
+    "comment": "Ajouter 'Adhérents' dans le menu principal (Incohérence actuelle avec le footer).",
+    "status": "todo"
+  },
+  {
+    "id": 14,
+    "date": "2026-04-28",
+    "client": "Christophe Laire",
+    "category": "NAVIGATION",
+    "comment": "Simplifier le menu principal : Retirer l'onglet FAQ.",
+    "status": "todo"
+  },
+  {
+    "id": 13,
+    "date": "2026-04-28",
+    "client": "Christophe Laire",
+    "category": "NAVIGATION",
+    "comment": "Transformer 'Contact' en bouton d'action plutôt qu'en simple item de menu.",
+    "status": "todo"
+  },
+  {
+    "id": 12,
+    "date": "2026-04-28",
+    "client": "Christophe Laire",
+    "category": "TECH",
+    "comment": "Vérifier si le Guide peut être intégré directement via un firmware au lieu d'une page externe.",
+    "status": "todo"
+  },
+  {
+    "id": 11,
+    "date": "2026-04-28",
+    "client": "Christophe Laire",
+    "category": "CONTENU",
+    "comment": "Modifier 'uniquement sur rendez-vous' par 'disponible sur rendez-vous'.",
+    "status": "todo"
+  },
+  {
+    "id": 10,
+    "date": "2026-04-28",
+    "client": "Christophe Laire",
+    "category": "CONTENU",
+    "comment": "Chèques Cadeaux : Remplacer 'adhérents' par 'tous nos commerçants de l'association'.",
+    "status": "todo"
+  },
+  {
+    "id": 9,
+    "date": "2026-04-28",
+    "client": "Christophe Laire",
+    "category": "UX",
+    "comment": "Réorganiser Chèques Cadeaux : Mettre le bénéfice client en premier (Acceptation > Employeurs > 10€).",
+    "status": "todo"
+  },
+  {
+    "id": 8,
+    "date": "2026-04-28",
+    "client": "Christophe Laire",
+    "category": "TECH",
+    "comment": "S'assurer que le Chatbot est asynchrone pour collecter les coordonnées et générer des leads.",
+    "status": "todo"
+  },
+  {
+    "id": 7,
+    "date": "2026-04-28",
+    "client": "Christophe Laire",
+    "category": "CONTENU",
+    "comment": "Page Asso : Remplacer par 'L'association regroupe +200 adhérents qui vous facilitent la vie'.",
+    "status": "todo"
+  },
+  {
+    "id": 6,
+    "date": "2026-04-28",
+    "client": "Christophe Laire",
+    "category": "DESIGN",
+    "comment": "Page Commerçants : Remplacer 'détail' par le sigle '+' avec 'info' à côté.",
+    "status": "todo"
+  },
+  {
+    "id": 5,
+    "date": "2026-04-28",
+    "client": "Christophe Laire",
+    "category": "CONTENU",
+    "comment": "Corriger l'orthographe dans la section Guide : mettre 'leurs savoir-faire' au pluriel.",
+    "status": "todo"
+  },
+  {
+    "id": 4,
+    "date": "2026-04-28",
+    "client": "Christophe Laire",
+    "category": "DESIGN",
+    "comment": "Chèques Cadeaux : Remplacer 'Pourquoi les acheter ?' en première position pour jouer sur la sensibilité locale et le positionnement moyen/haut de gamme de Marcq-en-Barœul.",
+    "status": "todo"
+  },
+  {
+    "id": 3,
+    "date": "2026-04-28",
+    "client": "STRATÉGIE",
+    "comment": "Évaluer si le bandeau défilant (Valérie) est plus pertinent que la vidéo actuelle (Christophe).",
+    "status": "todo"
+  },
+  {
+    "id": 2,
+    "date": "2026-04-28",
+    "client": "Christophe Laire",
+    "category": "UX",
+    "comment": "Le bouton 'partager l'événement' est excellent : permet le partage direct sur les réseaux sociaux.",
+    "status": "done"
+  },
+  {
+    "id": 1,
+    "date": "2026-04-28",
+    "client": "Christophe Laire",
+    "category": "DESIGN",
+    "comment": "Vérifier la cohérence visuelle : Adhérents présents en footer mais absents du menu principal.",
+    "status": "done"
+  }
 ]
