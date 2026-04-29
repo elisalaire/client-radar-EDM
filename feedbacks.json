@@ -1,6 +1,26 @@
 [
   {
-    "id": 30,
+    "id": 27,
+    "date": "2026-04-29",
+    "client": "Valérie Baert",
+    "category": "ARBITRAGE",
+    "waiting_for": "Valérie",
+    "comment": "DÉPENDANCE : Transformer l'onglet 'Carte' en 'Plan de la ville' avec mise en avant des quartiers.",
+    "status": "question",
+    "query": "Valérie, qu'entends-tu par mise en avant des quartiers ? (Zone interactive, code couleur, simple image ?)"
+  },
+  {
+    "id": 26,
+    "date": "2026-04-29",
+    "client": "Christophe Laire",
+    "category": "ARBITRAGE",
+    "waiting_for": "Christophe",
+    "comment": "DÉPENDANCE : Simplifier le menu principal en retirant l'onglet 'Carte'.",
+    "status": "question",
+    "query": "Christophe, cette action dépend de la validation du nouveau plan de ville demandé par Valérie. On supprime ou on transforme ?"
+  },
+  {
+    "id": 25,
     "date": "2026-04-29",
     "client": "Valérie Baert",
     "category": "DESIGN",
@@ -11,7 +31,7 @@
     "query": "En attente de ta photo, Valérie."
   },
   {
-    "id": 29,
+    "id": 24,
     "date": "2026-04-29",
     "client": "Valérie Baert",
     "category": "DESIGN",
@@ -22,7 +42,7 @@
     "query": "En attente de ta photo, Valérie."
   },
   {
-    "id": 28,
+    "id": 23,
     "date": "2026-04-29",
     "client": "Valérie Baert",
     "category": "DESIGN",
@@ -31,54 +51,6 @@
     "status": "blocked",
     "photo_needed": true,
     "query": "En attente de ta photo, Valérie."
-  },
-  {
-    "id": 27,
-    "date": "2026-04-29",
-    "client": "Valérie Baert",
-    "category": "question",
-    "waiting_for": "Valérie",
-    "comment": "Transformer l'onglet 'Carte' en 'Plan de la ville' avec mise en avant des quartiers.",
-    "status": "question",
-    "query": "Valérie, qu'entends-tu par mise en avant des quartiers ? (Zone interactive, code couleur, simple image ?)"
-  },
-  {
-    "id": 26,
-    "date": "2026-04-29",
-    "client": "Christophe Laire",
-    "category": "question",
-    "waiting_for": "Christophe",
-    "comment": "Simplifier le menu principal en retirant l'onglet 'Carte'.",
-    "status": "question",
-    "query": "Christophe, cette action dépend de la validation du nouveau plan de ville demandé par Valérie. On supprime ou on transforme ?"
-  },
-  {
-    "id": 25,
-    "date": "2026-04-29",
-    "client": "Valérie Baert",
-    "category": "CONTENU",
-    "comment": "Page Association : Restructurer pour parler d'abord des 200 adhérents (8 quartiers) et rappeler les stats ville (40 000 hab / xxxx hectares).",
-    "status": "todo"
-  },
-  {
-    "id": 24,
-    "date": "2026-04-29",
-    "client": "Christophe Laire",
-    "category": "NAVIGATION",
-    "waiting_for": "Christophe",
-    "comment": "Transformer 'Contact' en bouton d'action direct.",
-    "status": "question",
-    "query": "Est-ce que cela pourrait être un bouton qui ouvre un popup avec le formulaire de contact direct ?"
-  },
-  {
-    "id": 23,
-    "date": "2026-04-29",
-    "client": "Valérie Baert",
-    "category": "DESIGN",
-    "waiting_for": "Valérie",
-    "comment": "Accueil : Évaluer le bandeau défilant pour les événements du moment (vs Vidéo actuelle).",
-    "status": "question",
-    "query": "S'agit-il du bandeau rose actuel rendu automatique pour faire défiler les événements ?"
   },
   {
     "id": 22,
@@ -96,43 +68,23 @@
     "date": "2026-04-29",
     "client": "Christophe Laire",
     "category": "NAVIGATION",
-    "comment": "Footer : Rendre le numéro de téléphone cliquable.",
-    "status": "todo"
+    "waiting_for": "Christophe",
+    "comment": "Transformer 'Contact' en bouton d'action direct.",
+    "status": "question",
+    "query": "Est-ce que cela pourrait être un bouton qui ouvre un popup avec le formulaire de contact direct ?"
   },
   {
     "id": 20,
     "date": "2026-04-29",
-    "client": "Christophe Laire",
-    "category": "CONTENU",
-    "comment": "Fiches Adhérents (Détail) : Intégrer les descriptions longues transmises.",
-    "status": "todo"
+    "client": "Valérie Baert",
+    "category": "DESIGN",
+    "waiting_for": "Valérie",
+    "comment": "Accueil : Évaluer le bandeau défilant pour les événements du moment (vs Vidéo actuelle).",
+    "status": "question",
+    "query": "S'agit-il du bandeau rose actuel rendu automatique pour faire défiler les événements ?"
   },
   {
     "id": 19,
-    "date": "2026-04-29",
-    "client": "Christophe Laire",
-    "category": "CONTENU",
-    "comment": "Fiches Adhérents (Détail) : Ajouter les galeries photos (vitrines et produits).",
-    "status": "todo"
-  },
-  {
-    "id": 18,
-    "date": "2026-04-29",
-    "client": "Christophe Laire",
-    "category": "UX",
-    "comment": "Fiches Adhérents : Rendre le numéro de téléphone cliquable (Click-to-call).",
-    "status": "todo"
-  },
-  {
-    "id": 17,
-    "date": "2026-04-29",
-    "client": "Christophe Laire",
-    "category": "UX",
-    "comment": "Ajouter une barre de recherche globale (recherche par type : boucher, coiffeur, etc.).",
-    "status": "todo"
-  },
-  {
-    "id": 16,
     "date": "2026-04-29",
     "client": "Christophe Laire",
     "category": "NAVIGATION",
@@ -142,7 +94,55 @@
     "query": "Besoin de précisions : s'agit-il d'une page annuaire complète ou d'un raccourci spécifique dans le menu ?"
   },
   {
+    "id": 18,
+    "date": "2026-04-29",
+    "client": "Valérie Baert",
+    "category": "CONTENU",
+    "comment": "Page Association : Restructurer pour parler d'abord des 200 adhérents (8 quartiers) et rappeler les stats ville.",
+    "status": "todo"
+  },
+  {
+    "id": 17,
+    "date": "2026-04-29",
+    "client": "Christophe Laire",
+    "category": "NAVIGATION",
+    "comment": "Footer : Rendre le numéro de téléphone cliquable.",
+    "status": "todo"
+  },
+  {
+    "id": 16,
+    "date": "2026-04-29",
+    "client": "Christophe Laire",
+    "category": "CONTENU",
+    "comment": "Fiches Adhérents (Détail) : Intégrer les descriptions longues transmises.",
+    "status": "todo"
+  },
+  {
     "id": 15,
+    "date": "2026-04-29",
+    "client": "Christophe Laire",
+    "category": "CONTENU",
+    "comment": "Fiches Adhérents (Détail) : Ajouter les galeries photos (vitrines et produits).",
+    "status": "todo"
+  },
+  {
+    "id": 14,
+    "date": "2026-04-29",
+    "client": "Christophe Laire",
+    "category": "UX",
+    "comment": "Fiches Adhérents : Rendre le numéro de téléphone cliquable (Click-to-call).",
+    "status": "todo"
+  },
+  {
+    "id": 13,
+    "date": "2026-04-29",
+    "client": "Christophe Laire",
+    "category": "UX",
+    "comment": "Ajouter une barre de recherche globale.",
+    "status": "todo"
+  },
+  {
+    "id": 12,
     "date": "2026-04-29",
     "client": "Christophe Laire",
     "category": "NAVIGATION",
@@ -150,7 +150,7 @@
     "status": "todo"
   },
   {
-    "id": 14,
+    "id": 11,
     "date": "2026-04-29",
     "client": "Christophe Laire",
     "category": "NAVIGATION",
@@ -158,7 +158,7 @@
     "status": "todo"
   },
   {
-    "id": 12,
+    "id": 10,
     "date": "2026-04-29",
     "client": "Christophe Laire",
     "category": "TECH",
@@ -166,58 +166,43 @@
     "status": "todo"
   },
   {
-    "id": 11,
-    "date": "2026-04-29",
-    "client": "Christophe Laire",
-    "category": "CONTENU",
-    "comment": "Remplacer la mention 'uniquement sur rendez-vous' par 'disponible sur rendez-vous'.",
-    "status": "todo"
-  },
-  {
-    "id": 10,
-    "date": "2026-04-29",
-    "client": "Christophe Laire",
-    "category": "CONTENU",
-    "comment": "Chèques Cadeaux : Utiliser 'tous nos commerçants de l'association' au lieu d'adhérents.",
-    "status": "todo"
-  },
-  {
     "id": 9,
     "date": "2026-04-29",
     "client": "Christophe Laire",
-    "category": "UX",
-    "comment": "Réorganiser la page Chèques Cadeaux : Mettre les bénéfices clients en priorité.",
+    "category": "CONTENU",
+    "comment": "Remplacer 'uniquement sur rendez-vous' par 'disponible sur rendez-vous'.",
     "status": "todo"
   },
   {
     "id": 8,
     "date": "2026-04-29",
     "client": "Christophe Laire",
-    "category": "TECH",
-    "comment": "Vérifier le mode asynchrone du chatbot pour garantir la collecte de leads.",
+    "category": "CONTENU",
+    "comment": "Chèques Cadeaux : Utiliser 'tous nos commerçants' au lieu d'adhérents.",
     "status": "todo"
   },
   {
     "id": 7,
     "date": "2026-04-29",
     "client": "Christophe Laire",
-    "category": "CONTENU",
-    "comment": "Page Association : Reformuler en '+200 adhérents qui vous facilitent la vie'.",
+    "category": "UX",
+    "comment": "Réorganiser la page Chèques Cadeaux : Priorité bénéfices clients.",
     "status": "todo"
   },
   {
     "id": 6,
     "date": "2026-04-29",
     "client": "Christophe Laire",
-    "category": "DESIGN",
-    "comment": "Page Adhérents : Utiliser le sigle '+' avec la mention 'info' au lieu de 'détail'.",
+    "category": "TECH",
+    "comment": "Vérifier le mode asynchrone du chatbot.",
     "status": "todo"
   },
   {
     "id": 5,
     "date": "2026-04-29",
-    "client": "CONTENU",
-    "comment": "Orthographe Guide : Corriger 'leurs savoir-faire' au pluriel.",
+    "client": "Christophe Laire",
+    "category": "CONTENU",
+    "comment": "Page Association : Reformuler en '+200 adhérents'.",
     "status": "todo"
   },
   {
@@ -225,7 +210,22 @@
     "date": "2026-04-29",
     "client": "Christophe Laire",
     "category": "DESIGN",
-    "comment": "Chèques Cadeaux : Ajuster le texte 'Pourquoi les acheter ?' pour le haut de gamme (Marcq-en-Barœul).",
+    "comment": "Page Adhérents : Utiliser 'info' au lieu de 'détail'.",
+    "status": "todo"
+  },
+  {
+    "id": 3,
+    "date": "2026-04-29",
+    "client": "CONTENU",
+    "comment": "Orthographe Guide : 'leurs savoir-faire' au pluriel.",
+    "status": "todo"
+  },
+  {
+    "id": 2,
+    "date": "2026-04-29",
+    "client": "Christophe Laire",
+    "category": "DESIGN",
+    "comment": "Chèques Cadeaux : Ajuster le texte pour le haut de gamme.",
     "status": "todo"
   }
 ]
