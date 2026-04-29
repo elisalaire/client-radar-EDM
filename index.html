@@ -11,7 +11,7 @@
         :root { 
             --bg: #05070a; 
             --card: rgba(20, 27, 45, 0.7); 
-            --accent: #e51b77; /* Le Rose Fuchsia de Marcq */
+            --accent: #e51b77; 
             --border: rgba(255, 255, 255, 0.1); 
         }
         body { 
@@ -20,6 +20,7 @@
             color: #e2e8f0; 
             font-family: 'Plus Jakarta Sans', sans-serif; 
             letter-spacing: -0.01em; 
+            min-height: 100vh;
         }
         .glass { 
             background: var(--card); 
@@ -36,24 +37,23 @@
         .status-dot { height: 8px; width: 8px; border-radius: 50%; display: inline-block; margin-right: 8px; }
         .text-fuchsia { color: var(--accent); }
         .bg-fuchsia { background-color: var(--accent); }
-        .border-fuchsia { border-color: var(--accent); }
     </style>
 </head>
-<body class="p-6 md:p-12 lg:p-20 text-white min-h-screen">
+<body class="p-6 md:p-12 lg:p-20 text-white">
 
     <div class="max-w-4xl mx-auto">
         <header class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-6">
             <div>
                 <h1 class="text-5xl font-extrabold uppercase tracking-tighter italic">Feedback <span class="text-fuchsia">Radar</span></h1>
                 <p class="text-slate-500 text-sm mt-3 font-mono uppercase tracking-[0.2em] flex items-center">
-                    <span class="status-dot bg-fuchsia animate-pulse"></span> Terminal v5.0 // Marcq Interaction
+                    <span class="status-dot bg-fuchsia animate-pulse"></span> Terminal v5.1 // Enseignes de Marcq
                 </p>
             </div>
             <div id="stats" class="flex flex-wrap gap-6 justify-end font-mono"></div>
         </header>
 
-        <div class="flex flex-wrap gap-4 mb-12 p-6 bg-white/5 border border-white/10 rounded-3xl items-center">
-            <span class="text-[10px] font-mono uppercase text-slate-500 mr-3 tracking-widest font-bold">Responsabilités :</span>
+        <div class="flex flex-wrap gap-4 mb-12 p-6 bg-white/5 border border-white/10 rounded-3xl items-center shadow-lg">
+            <span class="text-[10px] font-mono uppercase text-slate-500 mr-3 tracking-widest font-bold text-white/40">Responsabilités :</span>
             <div class="flex items-center gap-2 px-4 py-2 bg-blue-500/10 border border-blue-500/30 rounded-full">
                 <span class="text-[11px] text-blue-400 font-bold">🔵 Christophe 🙋‍♂️</span>
             </div>
@@ -88,8 +88,9 @@
                 data.sort((a, b) => (priorityOrder[a.status] || 99) - (priorityOrder[b.status] || 99));
 
                 document.getElementById('stats').innerHTML = `
-                    <div class="text-right border-l border-white/10 pl-6"><p class="text-[10px] text-slate-500 uppercase font-bold tracking-widest mb-1">Actions</p><p class="text-2xl font-black text-white">${data.length}</p></div>
-                    <div class="text-right border-l border-white/10 pl-6"><p class="text-[10px] text-fuchsia uppercase font-bold tracking-widest mb-1">Arbitrages</p><p class="text-2xl font-black text-fuchsia">${data.filter(i=>i.status==='question').length}</p></div>
+                    <div class="text-right border-l border-white/10 pl-6"><p class="text-[10px] text-slate-500 uppercase font-bold tracking-widest mb-1">Total</p><p class="text-2xl font-black text-white">${data.length}</p></div>
+                    <div class="text-right border-l border-white/10 pl-6"><p class="text-[10px] text-fuchsia uppercase font-bold tracking-widest mb-1 text-fuchsia/80">Besoin d'infos</p><p class="text-2xl font-black text-fuchsia">${data.filter(i=>i.status==='question').length}</p></div>
+                    <div class="text-right border-l border-white/10 pl-6"><p class="text-[10px] text-red-500 uppercase font-bold tracking-widest mb-1 text-red-500/80">Bloqués</p><p class="text-2xl font-black text-red-500">${data.filter(i=>i.status==='blocked').length}</p></div>
                 `;
 
                 const container = document.getElementById('action-list');
@@ -122,7 +123,7 @@
                             <div class="flex items-center gap-4 mb-6">
                                 <span class="tech-font text-[10px] px-3 py-1 rounded border ${config.class} uppercase font-bold tracking-widest">${config.label}</span>
                                 ${linkedBadge}
-                                <span class="text-slate-600 text-[10px] font-mono uppercase tracking-[0.2em]">// ${item.category}</span>
+                                <span class="text-slate-600 text-[10px] font-mono uppercase tracking-[0.2em] text-white/30">// ${item.category}</span>
                                 ${item.status !== 'done' ? waitingBadge : ''}
                             </div>
                             <p class="text-white font-semibold text-xl leading-relaxed mb-6">${item.comment}</p>
