@@ -49,7 +49,7 @@
         <div id="action-list" class="space-y-6 pb-24 text-white"></div>
     </div>
 
-    <button data-tally-open="2Eb629" class="fixed bottom-10 right-10 bg-fuchsia hover:scale-110 active:scale-95 text-white px-8 py-5 rounded-full font-black shadow-2xl transition-all z-50 uppercase text-xs tracking-widest">
+    <button data-tally-open="2Eb629" class="fixed bottom-10 right-10 hover:scale-110 active:scale-95 text-white px-8 py-5 rounded-full font-black shadow-[0_20px_50px_rgba(229,27,119,0.3)] transition-all z-50 uppercase text-xs tracking-widest" style="background-color: #e51b77;">
         Nouveau retour
     </button>
 
@@ -71,7 +71,6 @@
                     return b.id - a.id;
                 });
 
-                // COMPTEURS COMPLETS : Total, Question, Bloqué, À Faire, Terminé
                 document.getElementById('stats').innerHTML = `
                     <div class="text-right border-l border-white/10 pl-4"><p class="text-[9px] text-slate-500 uppercase font-bold tracking-widest">Total</p><p class="text-xl font-black text-white">${data.length}</p></div>
                     <div class="text-right border-l border-white/10 pl-4"><p class="text-[9px] text-fuchsia uppercase font-bold tracking-widest">Infos</p><p class="text-xl font-black text-fuchsia">${data.filter(i=>i.status==='question').length}</p></div>
