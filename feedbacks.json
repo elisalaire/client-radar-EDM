@@ -172,7 +172,7 @@
     "client": "Christophe Laire",
     "category": "CONTENU",
     "comment": "Chèques Cadeaux : Utiliser 'tous nos commerçants' au lieu d'adhérents.",
-    "status": "todo"
+    "status": "done"
   },
   {
     "id": 7,
@@ -180,7 +180,7 @@
     "client": "Christophe Laire",
     "category": "UX",
     "comment": "Réorganiser la page Chèques Cadeaux : Priorité bénéfices clients.",
-    "status": "todo"
+    "status": "done"
   },
   {
     "id": 6,
@@ -219,6 +219,6 @@
     "client": "Christophe Laire",
     "category": "DESIGN",
     "comment": "Chèques Cadeaux : Ajuster le texte pour le haut de gamme.",
-    "status": "todo"
+    "status": "done"
   }
 ]
