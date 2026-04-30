@@ -3,23 +3,34 @@
     "id": 26,
     "date": "2026-04-29",
     "client": "Christophe Laire",
-    "category": "ARBITRAGE",
-    "waiting_for": "Christophe",
-    "linked_to": 27,
-    "comment": "DÉPENDANCE : Simplifier le menu principal en retirant ou transformant l'onglet 'Carte'.",
-    "status": "question",
-    "query": "Christophe, on supprime l'onglet ou on le transforme en Plan de ville comme suggéré par Valérie ?"
+    "category": "NAVIGATION",
+    "comment": "Transformer l'onglet 'Carte' en 'Plan de la ville'",
+    "status": "todo"
   },
   {
     "id": 27,
     "date": "2026-04-29",
     "client": "Valérie Baert",
     "category": "DESIGN",
-    "waiting_for": "Valérie",
     "linked_to": 26,
-    "comment": "Transformer l'onglet 'Carte' en 'Plan de la ville' avec mise en avant des quartiers.",
-    "status": "question",
-    "query": "Valérie, cette action dépend de la décision de Christophe (ID #26). Si on transforme : qu'entends-tu par mise en avant des quartiers ?"
+    "comment": "Quartier identifié sur la fiche de l'adhérent par un code couleur identique à celui de la carte grâce à un label",
+    "status": "todo"
+  },
+  {
+    "id": 21,
+    "date": "2026-04-29",
+    "client": "Christophe Laire",
+    "category": "NAVIGATION",
+    "comment": "Transformer 'Contact' en bouton d'action direct et ouverture un popup avec le formulaire de contact",
+    "status": "todo"
+  },
+  {
+    "id": 19,
+    "date": "2026-04-29",
+    "client": "Christophe Laire",
+    "category": "NAVIGATION",
+    "comment": "Ajouter un sous-menu avec liste des commerçants par catégories pour accéder aux grandes familles de commerçants",
+    "status": "todo"
   },
   {
     "id": 25,
@@ -66,16 +77,6 @@
     "query": "En attente de ta photo, Valérie."
   },
   {
-    "id": 21,
-    "date": "2026-04-29",
-    "client": "Christophe Laire",
-    "category": "NAVIGATION",
-    "waiting_for": "Christophe",
-    "comment": "Transformer 'Contact' en bouton d'action direct.",
-    "status": "question",
-    "query": "Est-ce que cela pourrait être un bouton qui ouvre un popup avec le formulaire de contact direct ?"
-  },
-  {
     "id": 20,
     "date": "2026-04-29",
     "client": "Valérie Baert",
@@ -84,16 +85,6 @@
     "comment": "Accueil : Évaluer le bandeau défilant pour les événements du moment (vs Vidéo actuelle).",
     "status": "question",
     "query": "S'agit-il du bandeau rose actuel rendu automatique pour faire défiler les événements ?"
-  },
-  {
-    "id": 19,
-    "date": "2026-04-29",
-    "client": "Christophe Laire",
-    "category": "NAVIGATION",
-    "waiting_for": "Christophe",
-    "comment": "Ajouter un menu dédié pour accéder directement à la liste des commerçants.",
-    "status": "question",
-    "query": "Besoin de précisions : s'agit-il d'une page annuaire complète ou d'un raccourci spécifique dans le menu ?"
   },
   {
     "id": 18,
