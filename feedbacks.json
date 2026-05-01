@@ -148,7 +148,7 @@
     "client": "Christophe Laire",
     "category": "NAVIGATION",
     "comment": "Simplifier le menu : Supprimer l'onglet FAQ.",
-    "status": "todo"
+    "status": "done"
   },
   {
     "id": 10,
@@ -164,7 +164,7 @@
     "client": "Christophe Laire",
     "category": "CONTENU",
     "comment": "Remplacer 'uniquement sur rdv' par 'disponible sur rdv'.",
-    "status": "todo"
+    "status": "done"
   },
   {
     "id": 8,
@@ -188,7 +188,7 @@
     "client": "Christophe Laire",
     "category": "TECH",
     "comment": "Vérifier le mode asynchrone du chatbot.",
-    "status": "todo"
+    "status": "done"
   },
   {
     "id": 5,
@@ -196,7 +196,7 @@
     "client": "Christophe Laire",
     "category": "CONTENU",
     "comment": "Page Association : Reformuler en '+200 adhérents'.",
-    "status": "todo"
+    "status": "done"
   },
   {
     "id": 4,
@@ -204,14 +204,14 @@
     "client": "Christophe Laire",
     "category": "DESIGN",
     "comment": "Page Adhérents : Utiliser 'info' au lieu de 'détail'.",
-    "status": "todo"
+    "status": "done"
   },
   {
     "id": 3,
     "date": "2026-04-29",
     "client": "CONTENU",
     "comment": "Orthographe Guide : 'leurs savoir-faire' au pluriel.",
-    "status": "todo"
+    "status": "done"
   },
   {
     "id": 2,
