@@ -5,7 +5,7 @@
     "client": "Christophe Laire",
     "category": "NAVIGATION",
     "comment": "Transformer l'onglet 'Carte' en 'Plan de la ville'",
-    "status": "todo"
+    "status": "done"
   },
   {
     "id": 27,
@@ -30,7 +30,7 @@
     "client": "Christophe Laire",
     "category": "NAVIGATION",
     "comment": "Ajouter un sous-menu avec liste des commerçants par catégories pour accéder aux grandes familles de commerçants",
-    "status": "todo"
+    "status": "done"
   },
   {
     "id": 25,
