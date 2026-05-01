@@ -14,7 +14,7 @@
     "category": "DESIGN",
     "linked_to": 26,
     "comment": "Quartier identifié sur la fiche de l'adhérent par un code couleur identique à celui de la carte grâce à un label",
-    "status": "todo"
+    "status": "done"
   },
   {
     "id": 21,
@@ -108,7 +108,7 @@
     "client": "Christophe Laire",
     "category": "CONTENU",
     "comment": "Fiches Adhérents : Intégrer les descriptions longues.",
-    "status": "todo"
+    "status": "done"
   },
   {
     "id": 15,
@@ -116,7 +116,7 @@
     "client": "Christophe Laire",
     "category": "CONTENU",
     "comment": "Fiches Adhérents : Ajouter les galeries photos.",
-    "status": "todo"
+    "status": "done"
   },
   {
     "id": 14,
@@ -140,7 +140,7 @@
     "client": "Christophe Laire",
     "category": "NAVIGATION",
     "comment": "Menu Principal : Ajouter l'item 'Adhérents'.",
-    "status": "todo"
+    "status": "done"
   },
   {
     "id": 11,
