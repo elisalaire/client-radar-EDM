@@ -100,7 +100,7 @@
     "client": "Christophe Laire",
     "category": "NAVIGATION",
     "comment": "Footer : Rendre le numéro de téléphone cliquable.",
-    "status": "todo"
+    "status": "done"
   },
   {
     "id": 16,
@@ -124,7 +124,7 @@
     "client": "Christophe Laire",
     "category": "UX",
     "comment": "Fiches Adhérents : Rendre le numéro de téléphone cliquable.",
-    "status": "todo"
+    "status": "done"
   },
   {
     "id": 13,
