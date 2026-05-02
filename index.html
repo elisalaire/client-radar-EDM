@@ -31,19 +31,13 @@
         .glass:hover { border-color: var(--accent); transform: translateY(-4px); }
         .tech-font { font-family: 'JetBrains Mono', monospace; }
         .text-fuchsia { color: var(--accent); }
-        
-        /* Style amélioré pour les cartes terminées */
-        .card-done {
-            opacity: 0.6;
-            border-style: dashed;
-            background: rgba(16, 24, 39, 0.4);
-        }
+        .card-done { opacity: 0.6; border-style: dashed; background: rgba(16, 24, 39, 0.4); }
     </style>
 </head>
 <body class="p-6 md:p-12 lg:p-20 text-white">
 
     <div class="max-w-4xl mx-auto">
-        <header class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-6">
+        <header class="flex flex-col md:flex-row md:items-end justify-between mb-6 gap-6">
             <div>
                 <h1 class="text-5xl font-extrabold uppercase tracking-tighter italic">Feedback <span class="text-fuchsia">Radar</span></h1>
                 <p class="text-slate-500 text-sm mt-3 font-mono uppercase tracking-[0.2em] flex items-center text-white/40">
@@ -52,6 +46,16 @@
             </div>
             <div id="stats" class="flex flex-wrap gap-4 justify-end font-mono"></div>
         </header>
+
+        <div class="flex flex-wrap gap-4 mb-10 p-4 bg-white/5 border border-white/10 rounded-2xl items-center">
+            <span class="text-[10px] font-mono uppercase text-white/30 tracking-widest font-bold">Responsabilités :</span>
+            <div class="flex items-center gap-2 px-3 py-1.5 bg-blue-500/10 border border-blue-500/20 rounded-full">
+                <span class="text-[10px] text-blue-400 font-bold">🔵 Christophe</span>
+            </div>
+            <div class="flex items-center gap-2 px-3 py-1.5 bg-pink-500/10 border border-pink-500/20 rounded-full">
+                <span class="text-[10px] text-pink-400 font-bold">🌸 Valérie</span>
+            </div>
+        </div>
 
         <div id="action-list" class="space-y-6 pb-24 text-white"></div>
     </div>
@@ -82,7 +86,6 @@
                     <div class="text-right border-l border-white/10 pl-4"><p class="text-[9px] text-slate-500 uppercase font-bold tracking-widest">Total</p><p class="text-xl font-black text-white">${data.length}</p></div>
                     <div class="text-right border-l border-white/10 pl-4"><p class="text-[9px] text-fuchsia uppercase font-bold tracking-widest">Infos</p><p class="text-xl font-black text-fuchsia">${data.filter(i=>i.status==='question').length}</p></div>
                     <div class="text-right border-l border-white/10 pl-4"><p class="text-[9px] text-orange-400 uppercase font-bold tracking-widest">Bloqués</p><p class="text-xl font-black text-orange-400">${data.filter(i=>i.status==='blocked').length}</p></div>
-                    <div class="text-right border-l border-white/10 pl-4"><p class="text-[9px] text-white/60 uppercase font-bold tracking-widest">À Faire</p><p class="text-xl font-black text-white/60">${data.filter(i=>i.status==='todo').length}</p></div>
                     <div class="text-right border-l border-white/10 pl-4"><p class="text-[9px] text-emerald-500 uppercase font-bold tracking-widest">Fait</p><p class="text-xl font-black text-emerald-500">${data.filter(i=>i.status==='done').length}</p></div>
                 `;
 
@@ -96,13 +99,29 @@
                     }[item.status];
 
                     const isDone = item.status === 'done';
+                    
+                    // LOGIQUE EMOJI AMÉLIORÉE
+                    let badgeColor = "bg-slate-500/10 text-slate-400 border-slate-500/20";
+                    let emoji = "📋 ";
+                    if (item.waiting_for) {
+                        if (item.waiting_for.includes('Valérie') && item.waiting_for.includes('Christophe')) {
+                            emoji = "🌸🔵 ";
+                            badgeColor = "bg-purple-500/10 text-purple-400 border-purple-500/20";
+                        } else if (item.waiting_for.includes('Valérie')) {
+                            emoji = "🌸 ";
+                            badgeColor = "bg-pink-500/10 text-pink-400 border-pink-500/20";
+                        } else if (item.waiting_for.includes('Christophe')) {
+                            emoji = "🔵 ";
+                            badgeColor = "bg-blue-500/10 text-blue-400 border-blue-500/20";
+                        }
+                    }
 
                     return `
                         <div class="glass p-8 rounded-[2rem] ${isDone ? 'card-done' : ''}">
                             <div class="flex items-center gap-4 mb-6">
                                 <span class="tech-font text-[10px] px-3 py-1 rounded border ${config.class} uppercase font-bold tracking-widest">${config.label}</span>
                                 <span class="text-slate-600 text-[10px] font-mono uppercase tracking-[0.2em] text-white/20">// ${item.category}</span>
-                                ${item.waiting_for && !isDone ? `<span class="ml-auto tech-font text-[10px] px-3 py-1 rounded-full font-bold border ${item.waiting_for === 'Valérie' ? 'bg-pink-500/10 text-pink-400 border-pink-500/20' : 'bg-blue-500/10 text-blue-400 border-blue-500/20'}">Attente : ${item.waiting_for}</span>` : ''}
+                                ${item.waiting_for && !isDone ? `<span class="ml-auto tech-font text-[10px] px-3 py-1 rounded-full font-bold border ${badgeColor}">${emoji}Attente : ${item.waiting_for}</span>` : ''}
                             </div>
                             <p class="text-white font-semibold text-xl leading-relaxed mb-6 ${isDone ? 'text-white/80' : ''}">${item.comment}</p>
                             ${item.query && !isDone ? `
