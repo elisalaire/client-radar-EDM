@@ -132,7 +132,7 @@
     "client": "Christophe Laire",
     "category": "UX",
     "comment": "Ajouter une barre de recherche globale.",
-    "status": "todo"
+    "status": "done"
   },
   {
     "id": 12,
@@ -156,7 +156,7 @@
     "client": "Christophe Laire",
     "category": "TECH",
     "comment": "Étudier l'intégration du Guide via firmware.",
-    "status": "todo"
+    "status": "done"
   },
   {
     "id": 9,
