@@ -1,5 +1,25 @@
 [
   {
+    "id": 29,
+    "date": "2026-05-02",
+    "client": "Enseignes de Marcq",
+    "category": "UX / DESIGN",
+    "waiting_for": "Valérie & Christophe",
+    "comment": "Validation de la nouvelle structure de la fiche commerçant.",
+    "status": "question",
+    "query": "Est-ce que la nouvelle structure de la fiche commerçants vous convient ?"
+  },
+  {
+    "id": 28,
+    "date": "2026-05-02",
+    "client": "Enseignes de Marcq",
+    "category": "UX / DESIGN",
+    "waiting_for": "Valérie & Christophe",
+    "comment": "Validation de l'annuaire des adhérents sur la home avec bouton 'Info +'.",
+    "status": "question",
+    "query": "Est-ce que la nouvelle structure de l'annuaire des adhérents sur la page d'accueil vous convient avec le bouton 'info +' ?"
+  },
+  {
     "id": 26,
     "date": "2026-04-29",
     "client": "Christophe Laire",
