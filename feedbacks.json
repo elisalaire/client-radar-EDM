@@ -22,7 +22,7 @@
     "client": "Christophe Laire",
     "category": "NAVIGATION",
     "comment": "Transformer 'Contact' en bouton d'action direct et ouverture un popup avec le formulaire de contact",
-    "status": "todo"
+    "status": "done"
   },
   {
     "id": 19,
