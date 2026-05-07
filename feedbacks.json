@@ -7,7 +7,7 @@
     "waiting_for": "Valérie & Christophe",
     "comment": "Validation de la nouvelle structure de la fiche commerçant.",
     "status": "question",
-    "query": "Est-ce que la nouvelle structure de la fiche commerçants vous convient ?"
+    "query": "Je ne peux pas avoir une couleur différente par onglet, c'est un même design pour l'ensemble du module. Est-ce que l'on peut tout de même garder ce module que je trouve très pratique et lisible?"
   },
   {
     "id": 28,
@@ -57,54 +57,40 @@
     "date": "2026-04-29",
     "client": "Valérie Baert",
     "category": "DESIGN",
-    "waiting_for": "Valérie",
-    "comment": "Remplacer la photo de fond de la page 'Événement' (Jugée trop générale).",
-    "status": "blocked",
-    "photo_needed": true,
-    "query": "En attente de ta photo, Valérie."
+    "comment": "Remplacer la photo de fond de la page 'Événement'",
+    "status": "done"
   },
   {
     "id": 24,
     "date": "2026-04-29",
     "client": "Valérie Baert",
     "category": "DESIGN",
-    "waiting_for": "Valérie",
-    "comment": "Remplacer la photo de fond de la page 'Chèque Cadeau' (Jugée trop générale).",
-    "status": "blocked",
-    "photo_needed": true,
-    "query": "En attente de ta photo, Valérie."
+    "comment": "Remplacer la photo de fond de la page 'Chèque Cadeau'",
+    "status": "done",
   },
   {
     "id": 23,
     "date": "2026-04-29",
     "client": "Valérie Baert",
     "category": "DESIGN",
-    "waiting_for": "Valérie",
-    "comment": "Remplacer la photo de fond de la page 'Guide' (Jugée trop générale).",
-    "status": "blocked",
-    "photo_needed": true,
-    "query": "En attente de ta photo, Valérie."
+    "comment": "Remplacer la photo de fond de la page 'Guide'.",
+    "status": "done",
   },
   {
     "id": 22,
     "date": "2026-04-29",
     "client": "Valérie Baert",
     "category": "DESIGN",
-    "waiting_for": "Valérie",
     "comment": "Ajouter une photo d'un commerce avec la vitrophanie visible.",
-    "status": "blocked",
-    "photo_needed": true,
-    "query": "En attente de ta photo, Valérie."
+    "status": "done",
   },
   {
     "id": 20,
     "date": "2026-04-29",
     "client": "Valérie Baert",
     "category": "DESIGN",
-    "waiting_for": "Valérie",
-    "comment": "Accueil : Évaluer le bandeau défilant pour les événements du moment (vs Vidéo actuelle).",
-    "status": "question",
-    "query": "S'agit-il du bandeau rose actuel rendu automatique pour faire défiler les événements ?"
+    "comment": "Accueil : Mettre à jour la vidéo pour matcher avec les commerces de bouche de la ville",
+    "status": "done"
   },
   {
     "id": 18,
