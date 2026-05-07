@@ -4,10 +4,8 @@
     "date": "2026-05-02",
     "client": "Enseignes de Marcq",
     "category": "UX / DESIGN",
-    "waiting_for": "Valérie & Christophe",
-    "comment": "Validation de la nouvelle structure de la fiche commerçant.",
-    "status": "question",
-    "query": "Je ne peux pas avoir une couleur différente par onglet, c'est un même design pour l'ensemble du module. Est-ce que l'on peut tout de même garder ce module que je trouve très pratique et lisible?"
+    "comment": "Créer toutes les fiches commerçants",
+    "status": "todo",
   },
   {
     "id": 28,
@@ -15,9 +13,9 @@
     "client": "Enseignes de Marcq",
     "category": "UX / DESIGN",
     "waiting_for": "Valérie & Christophe",
-    "comment": "Validation de l'annuaire des adhérents sur la home avec bouton 'Info +'.",
+    "comment": "Validation de l'annuaire des adhérents sur la homepage",
     "status": "question",
-    "query": "Est-ce que la nouvelle structure de l'annuaire des adhérents sur la page d'accueil vous convient avec le bouton 'info +' ?"
+    "query": "Je ne peux pas avoir une couleur différente par onglet, c'est un même design pour l'ensemble du module. Est-ce que l'on peut tout de même garder ce module que je trouve très pratique et lisible?"
   },
   {
     "id": 26,
